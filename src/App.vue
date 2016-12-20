@@ -9,13 +9,14 @@
     <div class="router-view">
       <router-view></router-view>
     </div>
-    
+
   </div>
 </template>
 
 
 
 <style scoped>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,7 +27,7 @@
 }
 
 .router-container {
-  margin: 20px; 
+  margin: 20px;
 }
 
 .nav-left {
@@ -36,7 +37,6 @@
 .router-view{
   width: 1000px;
   height: 400px;
-  /*background: #2196F3;*/
   border: 1px solid #2196F3;
   margin: 0 auto;
 }
