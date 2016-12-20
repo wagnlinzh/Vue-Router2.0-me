@@ -3,13 +3,20 @@
     <img src="./assets/logo.png">
     <div class="router-container">
       <router-link to="/router1" class="nav-left">nav1</router-link>
-      <router-link to="/router2">nav2</router-link>
+      <router-link to="/router2" >nav2</router-link>
     </div>
 
-    <div class="router-view">
-      <router-view></router-view>
-    </div>
+
+
     
+      <!--<router-view class="view"></router-view>-->
+
+      <div class="router-view">
+        <transition name="fade" mode="out-in">
+          <router-view class="view"></router-view>
+        </transition>
+      </div>
+  
   </div>
 </template>
 
@@ -39,6 +46,22 @@
   /*background: #2196F3;*/
   border: 1px solid #2196F3;
   margin: 0 auto;
+}
+
+.view{
+  max-width : 800px;
+  margin: 0 auto;
+  position :relative;
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: all .5s ease;
+
+}
+
+.fade-enter, .fade-leave-active{
+  opacity :0;
+  transform: translateX(10px);
 }
 
 </style>
